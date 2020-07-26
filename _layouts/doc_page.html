@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<div class="content">
+    {{ content }}
+</div>
+<div class="topics">
+    <h1>Topics</h1>
+    <ul>
+        {% assign pages = site.pages | sort: "name" %}
+        {% for page in pages %}
+        {% if page.menu_type == "topic" %}
+        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+</div>

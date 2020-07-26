@@ -1,0 +1,24 @@
+<header class="site-header" role="banner">
+    <div class="topbanner">
+        <h1>Generated Tech Project: <small>testing becomes easier...</small></h1>
+    </div>
+    <div class="alert">
+        <h1>Important!</h1>
+        <p>This project and user guide is under develoing. Current version of project documentation you can be found
+            <a
+                    href="docs/">here</a>. <a href="docs/roadmap.html">Roadmap</a> of the prohect can be found <a
+                    href="docs/roadmap.html">here</a>.</p>
+    </div>
+    <div class="menu">
+        <ul>
+            {% assign pages = site.pages | sort: "title" %}
+            {% for page in pages %}
+            {% if page.menu_type == "main" %}
+            <li>
+                <a href="{{ page.url }}">{{ page.title }}</a>
+            </li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+</header>

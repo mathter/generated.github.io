@@ -1,0 +1,120 @@
+.headercontainer {
+    color: red;
+    background-color: aqua;
+}
+
+body {
+    color: #495242;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 0;
+    margin: 0;
+    line-height: 1.5em;
+}
+
+h1 {
+    font-size: 140%;
+    font-weight: 900;
+    text-align: left;
+    margin: 20px 5px 5px 0px;
+}
+
+h2 {
+    font-size: 120%;
+    font-weight: 900;
+    text-align: left;
+    margin: 20px 5px 5px 0px;
+}
+
+.topbanner {
+    position: relative;
+    padding: 10px 10px 10px 10px;
+    width: auto;
+    border: 1px #565656 solid;
+    background-color: darkgray;
+    border-radius: 5px;
+}
+
+.alert {
+    position: relative;
+    padding: 10px 10px 10px 10px;
+    margin: 30px 0px 5px 0px;
+    width: auto;
+    border: 1px #ffa400 solid;
+    background-color: #ffbf03;
+    border-radius: 5px;
+}
+
+.root {
+    display: block;
+    padding: 10px 50px 10px 50px;
+    margin: 10px auto 10px auto;
+    max-width: 900px;
+}
+
+.main {
+    display: flex;
+    max-width: 100%;
+}
+
+.content {
+    display: inline-block;
+    flex-grow: 1;
+}
+
+.topics {
+    position: relative;
+    margin: 0px 0px 0px 10px;
+    max-width: 20%;
+}
+
+a {
+    color: #495242;
+}
+
+a:hover {
+    color: #a334cb;
+    background-color: rgba(12, 206, 178, 0.4);
+}
+
+
+p {
+    text-align: justify;
+}
+
+.features {
+    padding-left: 0px;
+    text-align: justify;
+    margin: 0px 0px 0px 0px;
+}
+
+.features li {
+    list-style-type: circle;
+    text-align: justify;
+    margin: 10px 0px 0px 0px;
+}
+
+.menu {
+    position: relative;
+    padding: 0px 10px 0px 10px;
+    margin: 30px auto auto auto;
+    width: auto;
+}
+
+.menu ul {
+    padding: 0;
+    margin: 0;
+    justify-content: space-evenly;
+    display: flex;
+}
+
+.menu li {
+    display: inline;
+    font-size: 140%;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    src: url("../font/Comfortaa.ttf");
+    font-stretch: semi-condensed;
+}
