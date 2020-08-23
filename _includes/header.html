@@ -1,6 +1,6 @@
-<header class="site-header" role="banner">
+<header class="headercontainer" role="banner">
     <div class="topbanner">
-        Generated Tech Project: <small>testing becomes easier...</small>
+        Generated Tech Project: <span style="display: inline-flex"><small>testing becomes easier...</small></span>
     </div>
     <div class="alert">
         <h1>Important!</h1>
@@ -9,16 +9,16 @@
                     href="docs/">here</a>. <a href="docs/roadmap.html">Roadmap</a> of the prohect can be found <a
                     href="docs/roadmap.html">here</a>.</p>
     </div>
-    <div class="menu">
-        <ul>
-            {% assign pages = site.pages | sort: "title" %}
-            {% for page in pages %}
-            {% if page.menu_type == "main" %}
-            <li>
-                <a href="{{ page.url }}">{{ page.title }}</a>
-            </li>
-            {% endif %}
-            {% endfor %}
-        </ul>
-    </div>
 </header>
+<div class="menu">
+    <ul>
+        {% assign pages = site.pages | sort: "title" %}
+        {% for page in pages %}
+        {% if page.menu_type == "main" %}
+        <li>
+            <a href="{{ page.url }}">{{ page.title }}</a>
+        </li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+</div>

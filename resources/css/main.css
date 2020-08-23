@@ -1,13 +1,13 @@
 @import "github.css";
 
 .headercontainer {
-    color: red;
-    background-color: aqua;
+    min-height: 15em;
+    margin-left: 15em;
 }
 
 body {
     color: #495242;
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: 300;
     padding: 0;
     margin: 0;
@@ -38,17 +38,15 @@ h3 {
 
 .topbanner {
     position: relative;
-    padding: 10px 10px 10px 10px;
-    width: auto;
-    text-align: right;
-    font-size: 200%;
+    font-size: 2em;
     font-weight: 900;
+    line-height: 1.1em;
+    text-align: right;
 }
 
 .alert {
     position: relative;
-    padding: 10px 10px 10px 10px;
-    margin: 30px 0px 5px 400px;
+    text-align: justify;
     width: auto;
     border: 1px #ffa400 solid;
     border-radius: 5px;
@@ -57,16 +55,16 @@ h3 {
 
 .root {
     display: block;
-    padding: 10px 0px 10px 0px;
-    margin: 10px auto 10px auto;
+    margin: auto;
+    padding: 1em;
     max-width: 60em;
     background-image: url("../images/favicon256.png");
     background-repeat: no-repeat;
+    background-size: 15em;
 }
 
 .main {
     display: flex;
-    max-width: 100%;
 }
 
 .content {
@@ -75,7 +73,7 @@ h3 {
 }
 
 .topics {
-    position: relative;
+    display: inline-block;
     margin: 0px 0px 0px 10px;
     max-width: 20%;
 }
