@@ -25,7 +25,8 @@ ObjectFactory objectFactory = engine.objectFactory();
 ```
 All java object are based on simple type as ``long``, ``int``, ``String`` and etc
 (all simple types description is [here](topic_100_simple_types)).
-There is default configuration for generating all such types. And your can use simple code for produce new object:
+There is [default configuration](https://github.com/mathter/generated/blob/master/common/src/main/java/tech/generated/common/annotation/DefaultConfiguration.java)
+for generating all such types. And your can use simple code for produce new object:
 ```java
 GeneratedEngine engine = GeneratedEngineFactory.newInstance(null);
 ObjectFactory objectFactory = engine.objectFactory();
@@ -38,8 +39,8 @@ String value = objectFactory.build(
 ```
 
 ### Complex object generation
-That abount complex object? It is very simple! All complex object consist of another complext objects and they are based
-on [simple objects](topic_100_simple_types). And Generated engine can automatically produce such objects:
+That abount complex object? It is very simple! All complex object consist of [simple types](topic_100_simple_types) as ``long``, ``int``, ``String``
+or another complext objects. And Generated engine can automatically produce such objects:
 ```java
 class MyComplexClass {
     private Integer index;
@@ -74,7 +75,7 @@ public class CustomConfiguration extends DefaultConfiguration {
       return new Person();
    }
 
-   // Or simply
+   // Or simply if aditional information about context not required.
    @InstanceBuilder
    public Person personInstance(){ 
       return new Person();
@@ -93,7 +94,7 @@ class WithRecursion {
 }
 ```
 Of couse ``java.lang.StackOverflowError`` will be generated!
-To avoid this you can use custom object generation. For example to generate objects with 10 deep use next configuration.
+To avoid this custom configuration cant be used. Next sample show generating object with 10 deep.
 ```java
 public class CustomConfiguration extends DefaultConfiguration {
     private static final int DEEP = 10;

@@ -47,6 +47,7 @@ h3 {
 .alert {
     position: relative;
     text-align: justify;
+    padding: 1em;
     width: auto;
     border: 1px #ffa400 solid;
     border-radius: 5px;
