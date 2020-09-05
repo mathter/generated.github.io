@@ -1,10 +1,10 @@
 ---
 layout: doc_page
-title: "Custom Annotation Configuration"
+title: "Simple Types"
 menu_type: topic
 ---
 # Documentation
-## Custom Annotation Configuration
+## Simple types
 <div class="alert alert-block alert-danger">
 Comming soon
 </div>
