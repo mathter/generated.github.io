@@ -1,23 +1,26 @@
-<header class="headercontainer" role="banner">
-    <div class="topbanner">
-        Generated Tech Project: <span style="display: inline-flex"><small>testing becomes easier...</small></span>
+<header class="header" role="banner">
+    <div id="wrapper">
+        <div class="logo">
+            <img src="/resources/images/favicon512.png"/>
+        </div>
+        <div class="logotext">
+            Generated Tech Project: <span style="display: inline-flex"><small>testing becomes easier...</small></span>
+        </div>
+        <div class="alert">
+            <h1>Important!</h1>
+            <p>This project and user guide is under develoing. Current version of project documentation can be found
+                <a href="docs/index.html">here</a>. <a href="docs/roadmap.html">Roadmap</a> of the project can be found <a
+                        href="docs/roadmap.html">here</a>.</p>
+        </div>
     </div>
-    <div class="alert">
-        <h1>Important!</h1>
-        <p>This project and user guide is under develoing. Current version of project documentation can be found
-            <a href="docs/">here</a>. <a href="docs/roadmap.html">Roadmap</a> of the project can be found <a
-                    href="docs/roadmap.html">here</a>.</p>
-    </div>
-</header>
-<div class="menu">
-    <ul>
+    <div class="menu">
         {% assign pages = site.pages | sort: "title" %}
         {% for page in pages %}
         {% if page.menu_type == "main" %}
-        <li>
+        <div>
             <a href="{{ page.url }}">{{ page.title }}</a>
-        </li>
+        </div>
         {% endif %}
         {% endfor %}
-    </ul>
-</div>
+    </div>
+</header>

@@ -1,10 +1,10 @@
 ---
 layout: default
 ---
-<div class="content">
+<div class="content flex">
     {{ content }}
 </div>
-<div class="topics">
+<div class="topics flex">
     <h1>Topics</h1>
     <ul>
         {% assign pages = site.pages | sort: "name" %}
