@@ -11,13 +11,14 @@ To make use of Generated within your project, simply add the maven dependency av
 <dependency>
    <groupId>tech.generated</groupId>
    <artifactId>common</artifactId>
-   <version>1.0.4</version> <!-- or latest version -->
+   <version>1.0.6</version> <!-- or latest version -->
 </dependency>
 ```
 <div class="alert alert-block alert-danger">
 <b>Please verify the latest version</b>
 </div>
-
+### Sources
+There is source code at [github.com](https://github.com/mathter/generated)
 ### HelloWorld sample
 It is required to get [ObjectFactory]({{site.source_base}}common/src/main/java/tech/generated/common/ObjectFactory.java) firstly to start using **Generated**.
 It is possible to use default configuration for generating values for your project.
@@ -196,4 +197,48 @@ public class CustomConfiguration extends DefaultConfiguration {
 GeneratedEngine engine = GeneratedEngineFactory.newInstance(new CustomConfiguration());
 ObjectFactory objectFactory = engine.objectFactory();
 WithRecursion object = objectFactory.build(WithRecursion.class);
+```
+
+#### @Path selector
+It is possible to specify custom ``@InstanceBuilder`` or ``@Filler`` for selected object field. Next example shows custom filler
+for field ``name`` of ``Persone`` class.
+```java
+public class CustomConfiguration extends DefaultConfiguration {
+    @Filler
+    @Path(value = "name")
+    public String name(String name) {
+        return "Alex";
+    }
+}
+```
+It is possible to specify the nesting level of the field.
+```java
+public class Family {
+    private Person father;
+}
+public class CustomConfiguration extends DefaultConfiguration {
+    // 'name' is the field of root object
+    @Filler
+    @Path(value = "/name")
+    public String name(String name) {
+        return "Alex";
+    }
+    
+    // 'name' is second field. For example 'name' field of 'father' one of the Family class.
+    @Filler
+    @Path(value = "/../name")
+    public String name(String name) {
+        return "Alex"; 
+    }
+}
+```
+You can use the ``*`` character to specify any valid characters in the field name.
+```java
+public class CustomConfiguration extends DefaultConfiguration {
+    @Filler
+    @Path(value = "/fa*/name")
+    public String name(String name) {
+        return "Alex";
+    }
+}
 ```
