@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<div class="content flex">
+    {{ content }}
+</div>
+<div class="topics flex">
+    <h1>Posts</h1>
+    <ul>
+        {% for page in site.posts %}
+        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+        {% endfor %}
+    </ul>
+</div>

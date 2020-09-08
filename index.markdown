@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post_page
 title: "About"
 menu_type: main
 ---
