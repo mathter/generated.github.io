@@ -18,19 +18,19 @@ To make use of Generated within your project, simply add the maven dependency av
 <b>Please verify the latest version</b>
 </div>
 ### Sources
-There is source code at [github.com](https://github.com/mathter/generated)
+There are source codes at [github.com](https://github.com/mathter/generated)
 ### HelloWorld sample
-It is required to get [ObjectFactory]({{site.source_base}}common/src/main/java/tech/generated/common/ObjectFactory.java) firstly to start using **Generated**.
-It is possible to use default configuration for generating values for your project.
+It is required to get [ObjectFactory]({{site.source_base}}common/src/main/java/tech/generated/common/ObjectFactory.java) firstly to start using **Generated Tech Project**.
+It is possible to use a default configuration for generating values for your project.
 ```java
 GeneratedEngine engine = GeneratedEngineFactory.newInstance(null);
 ObjectFactory objectFactory = engine.objectFactory();
 ```
 
-All java object are based on simple types as ``long``, ``int``, ``String`` and etc
+All java objects are based on simple types such as ``long``, ``int``, ``String`` and etc
 (all simple types description is [here](topic_100_simple_types)).
 There is [default configuration](https://github.com/mathter/generated/blob/master/common/src/main/java/tech/generated/common/annotation/DefaultConfiguration.java)
-for generating all such types. And your can use simple code for produce new object:
+for generating all such types. And you can use a simple code to produce a new object:
 ```java
 GeneratedEngine engine = GeneratedEngineFactory.newInstance(null);
 ObjectFactory objectFactory = engine.objectFactory();
@@ -43,7 +43,7 @@ String value = objectFactory.build(
 ```
 
 ### Complex object generation
-That abount complex object? It is very simple! All complex object consist of [simple types](topic_100_simple_types) as ``long``, ``int``, ``String``
+What about complex objects? It is very simple! All complex objects consist of [simple types](topic_100_simple_types) such as ``long``, ``int``, ``String``
 and/or another complext objects. And Generated engine can automatically produce such objects:
 ```java
 class MyComplexClass {
@@ -63,9 +63,9 @@ MyComplexClass object = objectFactory.build(
 ```
 ### Custom object generation
 It is possible to use own custom configuration for object generation.
-[In this section](topic_00_110_custom_configuration.html) you can get detailed informaion.
+[In this section](topic_00_110_custom_configuration.html) you can get detailed information.
 #### @InstanceBuilder
-To create perfect object instance use
+To create a class instance use
 [``@Instancebuilder``](https://github.com/mathter/generated/blob/master/common/src/main/java/tech/generated/common/annotation/InstanceBuilder.java)
 annotation:
 ```java
@@ -91,14 +91,14 @@ public class CustomConfiguration extends DefaultConfiguration {
     }
 }
 ```
-In this case, custom configuration provides creation of object instance and fills all fields of object automatically
+In this case, custom configuration provides creation of class instance and fills all the fields of the object automatically
 by using [``DefaultFiller``](https://github.com/mathter/generated/blob/master/common/src/main/java/tech/generated/common/DefaultFiller.java).
 
 #### @InstanceBuilder - simple object generation
 ``simple = true`` attribute (by default is ``false``) of
 [``@InstanceBuilder``](https://github.com/mathter/generated/blob/master/common/src/main/java/tech/generated/common/annotation/InstanceBuilder.java)
 annotation can be used to skip filling stage of object generation.
-Such code is usefull if object have constructor with arguments.
+Such code is usefull if object has got a constructor with arguments.
 ```java
 public class Person {
    public Person(String name, String LastName) {
@@ -114,7 +114,7 @@ public class CustomConfiguration extends DefaultConfiguration {
 }
 ```
 #### Custom fillers by @Filler annotation
-Custom fillers can be used for populate object fields.
+Custom fillers can be used to populate object fields.
 ```java
 
 public class CustomConfiguration extends DefaultConfiguration {
@@ -144,10 +144,10 @@ Person object = objectFactory.build(Person.class);
 #### Specify class by @ForClass annotation
 Return type of the method is used for selecting object class which will be produced by
 [``@InstanceBuilder``](https://github.com/mathter/generated/blob/master/common/src/main/java/tech/generated/common/annotation/InstanceBuilder.java)
-annotaion, or type of the method parameter is used for selecting class witch will be filled by
+annotation, or type of the method parameter is used for selecting class witch will be filled by
 [``@Filler``](https://github.com/mathter/generated/blob/master/common/src/main/java/tech/generated/common/annotation/Filler.java)
 annotation.
-It is possible specify class by using
+It is possible to specify the class by using
 [``@ForClass``](https://github.com/mathter/generated/blob/master/common/src/main/java/tech/generated/common/annotation/ForClass.java)
 annotation directly.
 ```java
@@ -172,7 +172,7 @@ public class CustomConfiguration extends DefaultConfiguration {
 ```
 
 #### Recursion
-That will happen if there is a recursion in the object structure?
+What will happen if there is a recursion in the object structure?
 ```java
 class WithRecursion {
     private WithRecursion parent;
@@ -180,7 +180,7 @@ class WithRecursion {
 }
 ```
 Of couse ``java.lang.StackOverflowError`` will be generated!
-To avoid this custom configuration cant be used. Next sample show generating object with 10 deep.
+To avoid this custom configuration can't be used. Next sample shows generating the object with 10 deep.
 ```java
 public class CustomConfiguration extends DefaultConfiguration {
     private static final int DEEP = 10;
@@ -200,7 +200,7 @@ WithRecursion object = objectFactory.build(WithRecursion.class);
 ```
 
 #### @Path selector
-It is possible to specify custom ``@InstanceBuilder`` or ``@Filler`` for selected object field. Next example shows custom filler
+It is possible to specify custom ``@InstanceBuilder`` or ``@Filler`` for selected object fields. Next example shows custom filler
 for field ``name`` of ``Persone`` class.
 ```java
 public class CustomConfiguration extends DefaultConfiguration {

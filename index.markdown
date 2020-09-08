@@ -7,15 +7,14 @@ menu_type: main
 As developers we have to provide most efficiant solutions to business problems in
 the shortest possible time. It is necessary to focus on the really significant aspects of business goals
 and minimize the amount of mechanical work in such case. Enterprise applications are becoming more and more
-complex and more integrated each other forming entire ecosystems in our days. The testing takes
-first place in developing in such case. There are large number of testing methods and great tools
+complex and more integrated into one another forming entire ecosystems in nowadays. In such a case the testing takes
+the first place in developing. There are a large number of testing methods and great tools
 such as *JUnit,TestNG* and etc. But generating of test data can be significant.
 
-Test data generation can reach considerable effort of mechanical work which can be difficult to maintain and
-boring type of activities.
+Test data generation can reach considerable effort of mechanical work which can be boring and difficult to maintain.
 
 # Implementation
-Generated Tech Project is tool that should perform this tedious work for you. This is library for testing data
+Generated Tech Project is tool that will perform this tedious work for you. This is a library for testing data
 generation. Now test data generation for JVM based languages are released.
 
 # Advantages

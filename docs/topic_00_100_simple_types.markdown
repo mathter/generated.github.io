@@ -6,5 +6,5 @@ menu_type: topic
 # Documentation
 ## Simple types
 <div class="alert alert-block alert-danger">
-Comming soon
+Coming soon
 </div>
