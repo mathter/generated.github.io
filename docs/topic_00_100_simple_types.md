@@ -1,6 +1,6 @@
 ---
 layout: doc_page
-title: "Simple Types"
+title: Simple Types
 menu_type: topic
 ---
 # Documentation

@@ -1,6 +1,6 @@
 ---
 layout: doc_page
-title: "Custom Annotation Configuration"
+title: Custom Annotation Configuration
 menu_type: topic
 ---
 # Documentation

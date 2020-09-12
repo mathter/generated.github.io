@@ -1,6 +1,6 @@
 ---
 layout: doc_page
-title: "Docs"
+title: Docs
 menu_type: main
 ---
 # Documentation

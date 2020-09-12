@@ -1,6 +1,6 @@
 ---
 layout: post_page
-title: "About"
+title: About
 menu_type: main
 ---
 # About
